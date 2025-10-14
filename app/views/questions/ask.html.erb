@@ -1,5 +1,13 @@
-<form action="/answer" method="get">
-  <label for="question">Your question</label>
-  <input type="text" id="question" name="question">
-  <input type="submit" value="Ask!">
-</form>
+<div class="container">
+  <h1>Stupid Coaching</h1>
+
+  <p>Ask your coach anything:</p>
+
+  <form action="/answer" method="get">
+    <div class="input-group">
+      <label for="question" class="form-label me-2">Your question:</label>
+      <input type="text" id="question" name="question" class="form-control">
+      <button type="submit" class="btn btn-primary">Ask!</button>
+    </div>
+  </form>
+</div>

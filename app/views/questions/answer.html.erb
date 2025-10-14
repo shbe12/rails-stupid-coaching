@@ -1,13 +1,19 @@
-<h1>Ask the Coach</h1>
+<h1>Stupid Coaching</h1>
 
-<form action="/answer" method="get">
-  <label for="answer">Your question</label>
-  <input type="text" id="question" name="question">
-  <input type="submit" value="Ask!">
-</form>
+<blockquote>
+  <p>
+    <% if @question.blank? %>
+      😶
+    <% else %>
+      <%= @question %>
+    <% end %>
+  </p>
+  <cite>You</cite>
+</blockquote>
 
-<h1>Coach's Response</h1>
-<p> Your question: <%= @question %></p>
-<p><%= @answer %></p>
+<blockquote class="coach">
+  <p><%= @answer %></p>
+  <cite>Your coach</cite>
+</blockquote>
 
 <%= link_to "Ask a new question", ask_path %>
